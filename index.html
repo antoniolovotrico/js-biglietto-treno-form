@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>js-biglietto-treno-form</title>
+    </head>
+    <body>
+        <div class="bg_bordeaux">
+            <section id="calcolo_biglietto">
+                <h1>Calcola il prezzo del tuo biglietto</h1>
+                <div class="rounded_container">
+                    <div class="row d-flex">
+                        <div class="col d-flex">
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" name="name" id="full_name">
+                        </div>
+
+                        <div class="col d-flex">
+                            <label for="km">Km da percorrere</label>
+                            <input type="number" name="km" id="km">
+                        </div>
+
+                        <div class="col d-flex">
+                            <label for="fascia">Fascia d'età</label>
+                            <select name="fascia" id="fascia">
+                                <option value="minorenne">Minorenne</option>
+                                <option value="maggiorenne">Maggiorenne</option>
+                                <option value="over65">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row-btn d-flex">
+                    <button id="genera">Genera</button>
+                    <button id="annulla">Annulla</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="biglietto">
+                <h2>Il tuo Biglietto</h2>
+            
+            </section>
+        </div>
+        <script type="text/javascript" src="assets/js/main.js">
+        </script>
+    </body>
+</html>
