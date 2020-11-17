@@ -72,6 +72,12 @@ button {
     border-radius: 5px;
 }
 
+button:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: ease-in-out 1s;
+}
+
 .row-btn {
     justify-content: center;
 }
