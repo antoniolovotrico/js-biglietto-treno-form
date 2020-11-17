@@ -45,3 +45,7 @@ genera.addEventListener("click", function() {
     document.getElementById("carrozza").innerHTML = carrozza;
     document.getElementById("codice_cp").innerHTML = codiceCp;
 })
+
+annulla.addEventListener("click", function() {
+   document.getElementById("table").className = "clear";
+})

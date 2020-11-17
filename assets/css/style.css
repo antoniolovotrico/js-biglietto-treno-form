@@ -78,7 +78,7 @@ button {
 
 .ticket_box {
     background-color: white;
-    height: 200px;
+    height: 230px;
     margin: 0 50px;
     padding: 20px;
 }
@@ -96,4 +96,13 @@ table {
 
 #nome_passegero ,#title_pass{
     background-color: lightgray;
+}
+
+#nome_passegero {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.clear {
+    display: none;
 }
