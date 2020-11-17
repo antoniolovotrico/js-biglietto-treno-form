@@ -7,7 +7,7 @@
 .bg_bordeaux {
     background-color: #B91350;
     width: 800px;
-    height: 500px;
+    height: 600px;
     margin: auto;
     margin-top: 100px;
 }
@@ -76,3 +76,24 @@ button {
     justify-content: center;
 }
 
+.ticket_box {
+    background-color: white;
+    height: 200px;
+    margin: 0 50px;
+    padding: 20px;
+}
+
+th,td {
+    padding: 15px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+table {
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+#nome_passegero ,#title_pass{
+    background-color: lightgray;
+}

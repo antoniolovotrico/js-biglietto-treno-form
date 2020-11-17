@@ -3,9 +3,6 @@ var annulla = document.getElementById("annulla");
 
 genera.addEventListener("click", function() {
     
-    //Genera Ticket
-    console.log("genera il ticket");
-    
     //selezionare valore degli input
     var nameInput = document.getElementById("full_name");
     var kmInput = document.getElementById("km");
@@ -15,28 +12,36 @@ genera.addEventListener("click", function() {
     var name = nameInput.value;
     var km = kmInput.value;
     var fascia = fasciaInput.value;
-    console.log(name, km, fascia);
 
     //calcolo biglietto treno
     var costoKm = 0.21;
     var ticketPrice = costoKm * km;
-    console.log(ticketPrice);
+    var scontoMinorenne = ticketPrice * 0.20;
+    var scontoOver65 = ticketPrice * 0.40;
 
-    if(fascia == "minorenne") {
-        console.log("applica il 20% di sconto");
-        offer = "sconto minorenni"
-       
+
+    if (fascia == "minorenne") {
+        offer = "Sconto Minorenne";
+        document.getElementById("costo_biglietto").innerHTML = (ticketPrice - scontoMinorenne).toFixed(2) + "€";  
+    }   else if (fascia == "over65") {
+        offer = "Sconto Over 65";
+        document.getElementById("costo_biglietto").innerHTML = (ticketPrice - scontoOver65).toFixed(2) + "€";
+    }   else {
+        offer = "Prezzo Intero";
+        document.getElementById("costo_biglietto").innerHTML = ticketPrice + "€";
     }
 
-
-    //seleziona elementi del biglietto
-    var elName = document.getElementById("nome_passegero");
-    var elSconto = document.getElementById("sconto");
-    var elCarrozza = document.getElementById ("carrozza");
-    var elCodice = document.getElementById("codice_cp");
-    var elTicket = document.getElementById("ticket");
-
     //genera numero carrozza
-    var numeroCarrozza = Math.floor(Math.random()*100000 - 90000) + 90;
+    var carrozza = Math.floor(Math.random() * 100) + 1;
 
+    //genera codice cp
+    var minCp = 90000;
+    var maxCp = 100000;
+    var codiceCp = Math.floor(Math.random()* (maxCp - minCp +1)) + minCp;
+
+    //definisci ed inserisci elementi nel ticket
+    document.getElementById("nome_passegero").innerHTML = name;
+    document.getElementById("offerta").innerHTML = offer;
+    document.getElementById("carrozza").innerHTML = carrozza;
+    document.getElementById("codice_cp").innerHTML = codiceCp;
 })
